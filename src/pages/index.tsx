@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen min-w-screen flex flex-col">
+      <div className="min-h-screen min-w-screen bg-white flex flex-col">
         <header className="h-[60px] w-full px-5 lg:px-16 flex flex-row justify-between items-center text-xl">
           <div>© Korn</div>
           <div className="lg:hidden">
@@ -17,7 +17,7 @@ export default function Home() {
         <main className="w-full mt-40 lg:mt-[30px] flex flex-col lg:flex-row justify-between px-4 lg:px-0 font-sans   lg:pl-[120px] lg:pr-[40px]">
           {/* div head title */}
           <div className="lg:min-w-[569px]">
-          <h1 className=" text-[clamp(42px,_5vw,_60px)] lg:mt-28">
+          <h1 className=" text-[clamp(32px,_5vw,_60px)] lg:mt-28">
             An <span className="text-[#3C33E6]">experimental</span> <br />
             developer with a strong <br />
             interest in <span className="text-[#3C33E6]">fullstack web</span>
