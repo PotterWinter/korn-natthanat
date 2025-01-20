@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen min-w-screen bg-white flex flex-col">
+      <body className="min-h-screen min-w-screen bg-white flex flex-col text-black">
         <header className="h-[60px] w-full px-5 lg:px-16 flex flex-row justify-between items-center text-xl">
           <div>© Korn</div>
           <div className="lg:hidden">
@@ -44,7 +44,7 @@ export default function Home() {
           </div>
           <div className="h-20 lg:hidden"></div>
         </main>
-      </div>
+      </body>
     </>
   );
 }
