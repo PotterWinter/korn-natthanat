@@ -17,5 +17,15 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif; /* ฟอนต์หลัก */
+  overflow: scroll; /* ทำให้เลื่อนหน้าจอได้ */
+}
+
+.text-inria {
+  font-family: "Inria Sans", sans-serif; /* ฟอนต์รอง */
+}
+
+/* ซ่อนแถบเลื่อนในทุกๆ หน้า */
+::-webkit-scrollbar {
+  display: none;
 }
