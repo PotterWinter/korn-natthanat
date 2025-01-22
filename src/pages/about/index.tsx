@@ -56,8 +56,8 @@ export default function AboutIndex() {
                     Jan 2018 - Jan 2022
                   </h1>
                   <h1 className="font-light text-xs text-gray-500 lg:text-sm lg:text-black lg:max-w-[920px]">
-                    • King Mongkut's Institute of Technology Ladkrabang
-                    Bachelor's degree, Industrial and Product Design
+                    • King Mongkut&apos;s Institute of Technology Ladkrabang
+                    Bachelor&apos;s degree, Industrial and Product Design
                   </h1>
                 </div>
               </div>
