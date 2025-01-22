@@ -42,7 +42,7 @@ export function Navbar() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [router.pathname]);
 
   useEffect(() => {
     // ป้องกันไม่ให้เลื่อนหน้าจอเมื่อ Sidebar เปิด

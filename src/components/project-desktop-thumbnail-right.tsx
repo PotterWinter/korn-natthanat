@@ -1,4 +1,3 @@
-import Image from "next/image";
 // ประกาศ interface สำหรับ props
 interface ProjectDesktopThumbnailPropsRight {
   title: string;

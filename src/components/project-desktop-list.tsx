@@ -12,7 +12,7 @@ export function ProjectDesktopList({
   year,
   description,
   content,
-  image,
+  // image,
 }: ProjectDesktopListProps) {
   return (
     <>
