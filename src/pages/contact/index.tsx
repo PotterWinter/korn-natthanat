@@ -69,7 +69,7 @@ export default function ContactIndex() {
                   </a>
                 </div>
               </div>
-              <div className="flex flex-col gap-5">
+              {/* <div className="flex flex-col gap-5">
                 <h1 className="text-2xl font-semibold">ADDRESS</h1>
                 <div className=" font-light lg:w-[460px] lg:text-2xl">
                   <h1>
@@ -77,7 +77,7 @@ export default function ContactIndex() {
                     Mueang, Srinakarin Road, Samut Prakan 10270
                   </h1>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </main>

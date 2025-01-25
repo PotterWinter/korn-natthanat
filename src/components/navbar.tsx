@@ -84,6 +84,7 @@ export function Navbar() {
     <>
       <header className="h-[80px] w-full px-5 lg:px-16 flex flex-row justify-center items-center text-xl ">
         <div className="flex flex-row w-full justify-between items-center max-w-[1440px]">
+          {/* button for home page */}
           <button
             onClick={() => router.push("/")}
             className="relative flex items-center group"
@@ -112,7 +113,7 @@ export function Navbar() {
 
           {/* div menu desktop */}
           <div className="hidden lg:flex text-center gap-20 justify-between items-center">
-            <NavButton label="Work" path="/work" />
+            <NavButton label="Work" path="/" />
             <NavButton label="About" path="/about" />
             <NavButton label="Contact" path="/contact" />
           </div>
@@ -166,21 +167,21 @@ export function Navbar() {
             ></div>
           </div>
         </button>
-        {/* button for navigate */}
+        {/* sidebar for navigation page */}
         <div className="px-14 py-24 gap-16 flex flex-col">
           <div className="flex flex-col w-full">
             <h1 className="text-[#AFAFAF] text-sm ">NAVIGATION</h1>
             <div className="bg-[#AFAFAF] w-full h-px mt-4"></div>
           </div>
           <div className="flex flex-col gap-12 text-white text-3xl w-full items-start text-left">
-            <SidebarButtonNavigate
+            {/* <SidebarButtonNavigate
               label="Home"
               path="/"
               setPopupSidebar={setPopupSidebar}
-            />
+            /> */}
             <SidebarButtonNavigate
               label="Work"
-              path="/work"
+              path="/"
               setPopupSidebar={setPopupSidebar}
             />
             <SidebarButtonNavigate
