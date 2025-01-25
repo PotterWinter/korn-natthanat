@@ -117,7 +117,7 @@ export default function WorkIndex() {
               <h1 className=" flex text-[clamp(32px,_5vw,_60px)] text-inria text-[#3C33E6]">
                 Intend to creating <br className="md:hidden" /> digital products
               </h1>
-              <h1 className=" text-xs  w-full lg:max-w-[880px] lg:text-base font-light">
+              <h1 className=" text-xs  w-full lg:max-w-[920px] lg:text-base font-light">
                 A Full Stack Developer base in Bangkok with a Bachelor&apos;s
                 degree in Industrial Design from King Mongkut&apos;s Institute of
                 Technology Ladkrabang. My background in usability and design

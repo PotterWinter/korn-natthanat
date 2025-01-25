@@ -13,11 +13,12 @@ export default function AboutIndex() {
               Chuayriang
             </h1>
             <h1 className="font-light text-xs lg:text-base w-full lg:max-w-[920px]">
-              Lorem Ipsumis simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industrys standard dummy text
-              ever since Lorem Ipsumis simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industrys standard
-              dummy text{" "}
+            A Full Stack Developer base in Bangkok with a Bachelor&apos;s
+                degree in Industrial Design from King Mongkut&apos;s Institute of
+                Technology Ladkrabang. My background in usability and design
+                helps me understand functional, user-friendly solutions. I am
+                passion about building intuitive websites and and exploring new
+                technologies to enhance my skills.
             </h1>
             <div className="flex flex-col gap-8 lg:gap-12 mt-28 lg:mt-20">
               {/* div about me */}
@@ -25,7 +26,7 @@ export default function AboutIndex() {
                 <h1 className="font-semibold lg:text-2xl">ABOUT ME
                 </h1>
                 <a
-                  href="/components/resume/Resume.pdf"
+                  href="/resume/Resume.pdf"
                   target="blank"
                   className=" hover:scale-105 hover:text-gray-500 transform origin-left transition-all duration-200 text-sm lg:text-xl flex w-max"
                   style={{ transformOrigin: "left buttom" }}
@@ -38,8 +39,8 @@ export default function AboutIndex() {
                   expand my technical expertise.
                 </h1>
               </div>
-              <div className="w-full  h-[2px] bg-[#3C33E6] relative">
-                <div className="w-full  h-[2px] bg-[#3C33E6] absolute lg:w-[948px]  lg:-left-[0px]  lg:bottom-0 hidden lg:flex"></div>
+              <div className="w-full  h-[1.5px] bg-[#3C33E6] relative">
+                <div className="w-full  h-[1.5px] bg-[#3C33E6] absolute lg:w-[948px]  lg:-left-[0px]  lg:bottom-0 hidden lg:flex"></div>
               </div>
               {/* div education */}
               <div className="flex flex-col gap-3 lg:gap-8">
@@ -62,8 +63,8 @@ export default function AboutIndex() {
                   </h1>
                 </div>
               </div>
-              <div className="w-full  h-[2px] bg-[#3C33E6]  relative">
-                <div className="w-full  h-[2px] bg-[#3C33E6]  absolute lg:w-[948px] lg:-left-[0px]  lg:bottom-0 hidden lg:flex"></div>
+              <div className="w-full  h-[1.5px] bg-[#3C33E6]  relative">
+                <div className="w-full  h-[1.5px] bg-[#3C33E6]  absolute lg:w-[948px] lg:-left-[0px]  lg:bottom-0 hidden lg:flex"></div>
               </div>
               {/* div skill */}
               <div className="flex flex-col gap-3 lg:gap-8">
@@ -84,8 +85,8 @@ export default function AboutIndex() {
                   </h1>
                 </div>
               </div>
-              <div className="w-full  h-[2px] bg-[#3C33E6] relative">
-                <div className="w-full  h-[2px] bg-[#3C33E6]  absolute lg:w-[948px]  lg:-left-[0px]  lg:bottom-0 hidden lg:flex"></div>
+              <div className="w-full  h-[1.5px] bg-[#3C33E6] relative">
+                <div className="w-full  h-[1.5px] bg-[#3C33E6]  absolute lg:w-[948px]  lg:-left-[0px]  lg:bottom-0 hidden lg:flex"></div>
               </div>
               {/* div experience */}
               <div className="flex flex-col gap-3 lg:gap-8">
@@ -164,8 +165,8 @@ export default function AboutIndex() {
                   </h1>
                 </div>
               </div>
-              <div className="w-full  h-[2px] bg-[#3C33E6]  relative">
-                <div className="w-full  h-[2px] bg-[#3C33E6]  absolute lg:w-[948px]  lg:-left-[0px]  lg:bottom-0 hidden lg:flex"></div>
+              <div className="w-full  h-[1.5px] bg-[#3C33E6]  relative">
+                <div className="w-full  h-[1.5px] bg-[#3C33E6]  absolute lg:w-[948px]  lg:-left-[0px]  lg:bottom-0 hidden lg:flex"></div>
               </div>
             </div>
           </div>

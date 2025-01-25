@@ -119,7 +119,7 @@ export function Navbar() {
           </div>
         </div>
       </header>
-      <div className="w-full h-[2px] bg-[#3C33E6]"></div>
+      <div className="w-full h-[1.5px] bg-[#3C33E6]"></div>
 
       {/* button menu scroll window */}
       <button
@@ -142,7 +142,7 @@ export function Navbar() {
         }`}
       ></div>
       <div
-        className={`fixed top-0 right-0 h-full w-full lg:w-[400px] bg-black shadow-lg transition-all duration-200 ${
+        className={`fixed flex items-center top-0 right-0 h-full w-full lg:w-[400px] bg-black shadow-lg transition-all duration-200 ${
           popupSidebar ? "translate-x-[0] z-50" : "translate-x-[100%]"
         }`}
       >
@@ -168,8 +168,8 @@ export function Navbar() {
           </div>
         </button>
         {/* sidebar for navigation page */}
-        <div className="px-14 py-24 gap-16 flex flex-col">
-          <div className="flex flex-col w-full">
+        <div className="px-14 py-24 gap-16 flex flex-col w-full mr-5">
+          <div className="flex flex-col w-full ">
             <h1 className="text-[#AFAFAF] text-sm ">NAVIGATION</h1>
             <div className="bg-[#AFAFAF] w-full h-px mt-4"></div>
           </div>
@@ -197,7 +197,7 @@ export function Navbar() {
           </div>
           <div className="flex flex-col w-full">
             <h1 className="text-[#AFAFAF] text-sm ">SOCIAL</h1>
-            <div className="text-white w-full mt-4 flex justify-between">
+            <div className="text-white  w-full mt-4 flex justify-between">
               <a
                 href="https://www.linkedin.com/in/korn-natthanat/"
                 target="_blank"

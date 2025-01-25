@@ -8,7 +8,7 @@ export default function ContactIndex() {
         <main className="flex justify-start lg:justify-center lg:max-w-[980px] mt-[140px] lg:mt-[250px] w-full px-4 mb-40 ">
           <div className="flex flex-col gap-16 w-full ">
             {/* div head title */}
-            <h1 className=" text-[clamp(32px,_5vw,_60px)] text-inria ">
+            <h1 className=" text-[clamp(32px,_5vw,_60px)] text-inria text-[#3C33E6]">
               <span className="text-[#3C33E6]">thank</span> you{" "}
               <span className="text-[#3C33E6]">for</span> your <br />
               kind <span className="text-[#3C33E6]">attention</span>

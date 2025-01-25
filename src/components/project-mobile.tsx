@@ -15,7 +15,7 @@ export function ProjectMobile({
   return (
     <>
       <div className="flex flex-col w-full gap-5 mb-5">
-        <div className="flex w-full h-[2px] bg-[#3C33E6]"></div>
+        <div className="flex w-full h-[1.5px] bg-[#3C33E6]"></div>
         {/* <div className="flex w-full h-[250px] bg-black"></div> */}
         <img
           src={image}

@@ -17,7 +17,7 @@ export function ProjectDesktopList({
   return (
     <>
       <div className="flex flex-col w-full">
-        <div className="flex w-full h-[2px] bg-[#3C33E6] "></div>
+        <div className="flex w-full h-[1.5px] bg-[#3C33E6] "></div>
         <div className="flex flex-row justify-between items-start my-10 ">
           <h1 className="text-3xl w-[310px] pl-9">{title}</h1>
           <div className=" flex flex-col  justify-start w-[600px] gap-5 mt-1 relative">
