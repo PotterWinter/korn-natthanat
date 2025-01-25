@@ -119,7 +119,7 @@ export default function WorkIndex() {
               </h1>
               <h1 className=" text-xs  w-full lg:max-w-[880px] lg:text-base font-light">
                 A Full Stack Developer base in Bangkok with a Bachelor&apos;s
-                degree in Industrial Design from King Mongkut's Institute of
+                degree in Industrial Design from King Mongkut&apos;s Institute of
                 Technology Ladkrabang. My background in usability and design
                 helps me understand functional, user-friendly solutions. I am
                 passion about building intuitive websites and and exploring new
