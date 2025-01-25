@@ -16,7 +16,7 @@ export function ProjectDesktopThumbnailLeft({
 }: ProjectDesktopThumbnailPropsLeft) {
   return (
     <>
-      <div className="flex w-full h-[2px]  bg-[#3C33E6]"></div>
+      <div className="flex w-full h-[1.5px]  bg-[#3C33E6]"></div>
       <div className="flex flex-row w-full gap-10 justify-between items-center my-16 ">
         {/* <div className="flex ml-9 w-[600px] h-[390px] bg-black"></div> */}
         <div className="flex ml-9 flex-row w-full  justify-between items-center mb-5 duration-200 hover:scale-105 cursor-pointer">
@@ -27,7 +27,7 @@ export function ProjectDesktopThumbnailLeft({
           />
         </div>
         <div className="flex flex-col  w-full max-w-[420px] ">
-          <h1 className="text-2xl mb-6 inline-block hover:text-[#AFAFAF] cursor-pointer translate-all duration-200 ">
+        <h1 className="text-2xl mb-6 inline-block cursor-pointer translate-all duration-200 hover:scale-105 hover:text-gray-500 transform origin-left transition-all transform-origin-left">
             {title}
           </h1>
           <div className="flex flex-row justify-between w-full max-w-[420px] -mt-5 mb-10 font-light ">
