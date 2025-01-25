@@ -17,7 +17,7 @@ export function ProjectDesktopThumbnailRight({
   return (
     <>
       <div className="flex w-full h-[2px]  bg-[#3C33E6]"></div>
-      <div className="flex flex-row w-full  justify-between items-center my-16">
+      <div className="flex flex-row w-full  justify-between items-center my-5 gap-10">
         <div className="flex flex-col ml-9 ">
           <div className="">
             <h1 className="text-2xl mb-6 inline-block hover:text-[#AFAFAF] cursor-pointer translate-all duration-200 ">
