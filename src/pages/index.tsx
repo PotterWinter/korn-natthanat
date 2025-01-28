@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Navbar } from "@/components/navbar";
 import { ProjectMobile } from "@/components/project-mobile";
 import { ProjectDesktopThumbnailLeft } from "@/components/project-desktop-thumbnail-left";
