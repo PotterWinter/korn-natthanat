@@ -13,6 +13,6 @@ export interface ProjectType {
 
 declare global {
   interface Window {
-    Prism: any;
+    Prism: typeof import('prismjs')
   }
 }

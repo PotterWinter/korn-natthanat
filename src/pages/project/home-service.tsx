@@ -11,8 +11,11 @@ export default function HomeServiceProject() {
 
   return (
     <>
-      {project.map((project) => (
-        <div className="min-h-screen min-w-screen bg-white flex flex-col items-center text-black mb-20 ">
+      {project.map((project, index) => (
+        <div
+          key={index}
+          className="min-h-screen min-w-screen bg-white flex flex-col items-center text-black mb-20 "
+        >
           <Navbar />
           <main className="flex justify-start lg:justify-center lg:max-w-[980px] mt-[140px] lg:mt-[250px] px-4 mb-40 w-full lg:w-full">
             <div className="flex flex-col gap-5 lg:gap-16 ">
