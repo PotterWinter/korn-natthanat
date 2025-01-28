@@ -1,34 +1,35 @@
 import { Navbar } from "@/components/navbar";
+import { useState } from "react";
 
 export default function AboutIndex() {
+ 
   return (
     <>
       <div className="min-h-screen min-w-screen bg-white flex flex-col items-center text-black">
         <Navbar />
-        <main className="flex justify-start lg:justify-center lg:max-w-[980px] mt-[140px] lg:mt-[250px] w-full px-4 mb-40">
+        <main className="flex justify-start lg:justify-center lg:max-w-[980px] mt-[140px] lg:mt-[250px] w-full px-4 mb-40 ">
           <div className="flex flex-col gap-5 lg:gap-16">
             {/* div head title */}
-            <h1 className="text-[#3C33E6] text-[clamp(32px,_5vw,_60px)] text-inria lg:-mb-10">
-              Natthanat <br className="lg:hidden" />
+            <h1 className="text-[#3C33E6] text-[clamp(32px,_5vw,_72px)] text-inria lg:-mb-10">
+              Natthanat <br className="" />
               Chuayriang
             </h1>
-            <h1 className="font-light text-xs lg:text-base w-full lg:max-w-[920px]">
-            A Full Stack Developer base in Bangkok with a Bachelor&apos;s
-                degree in Industrial Design from King Mongkut&apos;s Institute of
-                Technology Ladkrabang. My background in usability and design
-                helps me understand functional, user-friendly solutions. I am
-                passion about building intuitive websites and and exploring new
-                technologies to enhance my skills.
+            <h1 className="font-light text-xs lg:text-base w-full lg:max-w-[880px]">
+              A Full Stack Developer base in Bangkok with a Bachelor&apos;s
+              degree in Industrial Design from King Mongkut&apos;s Institute of
+              Technology Ladkrabang. My background in usability and design helps
+              me understand functional, user-friendly solutions. I am passion
+              about building intuitive websites and and exploring new
+              technologies to enhance my skills.
             </h1>
             <div className="flex flex-col gap-8 lg:gap-12 mt-28 lg:mt-20">
               {/* div about me */}
               <div className="flex flex-col gap-3 lg:gap-8">
-                <h1 className="font-semibold lg:text-2xl">ABOUT ME
-                </h1>
+                <h1 className="font-semibold lg:text-2xl">ABOUT ME</h1>
                 <a
                   href="/resume/Resume.pdf"
-                  target="blank"
-                  className=" hover:scale-105 hover:text-gray-500 transform origin-left transition-all duration-200 text-sm lg:text-xl flex w-max"
+                  target="_blank"
+                  className=" hover:scale-105 hover:text-[#3C33E6] transform origin-left transition-all duration-200 text-sm lg:text-xl flex w-max"
                   style={{ transformOrigin: "left buttom" }}
                 >
                   CURRICULUM VITAE (CV) →
@@ -81,7 +82,7 @@ export default function AboutIndex() {
                   <h1 className="text-sm lg:text-xl lg:mb-2">Interested</h1>
                   <h1 className="font-light text-xs text-gray-500 lg:text-sm lg:text-black lg:max-w-[920px]">
                     {" "}
-                    • Go • Nuxt •
+                    • Go • Nuxt • Vue •
                   </h1>
                 </div>
               </div>
