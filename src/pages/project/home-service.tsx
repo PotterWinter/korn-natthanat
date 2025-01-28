@@ -63,7 +63,7 @@ export default function HomeServiceProject() {
               </section>
               <section className="relative -mt-1 lg:-mt-6">
                 <div className="w-full h-[1.5px] bg-[#3C33E6] ">
-                  <div className="top-0 -left-4  w-[1000px] h-[1.5px] bg-[#3C33E6] absolute lg:hidden"></div>
+                  <div className="top-0 -left-4  w-screen h-[1.5px] bg-[#3C33E6] absolute lg:hidden"></div>
                 </div>
                 <div className="flex gap-3 lg:gap-9 absolute right-10 -top-10 lg:-top-20">
                   {project.linkGitHub && (
