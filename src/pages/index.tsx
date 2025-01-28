@@ -5,84 +5,33 @@ import { ProjectDesktopThumbnailLeft } from "@/components/project-desktop-thumbn
 import { ProjectDesktopThumbnailRight } from "@/components/project-desktop-thumbnail-right";
 import { ProjectDesktopList } from "@/components/project-desktop-list";
 import { useRouter } from "next/router";
-type ButtonType = "all" | "development" | "design";
+import { projects } from "../components/project-data";
 
-interface Project {
+
+export type ButtonFilterType = "all" | "development" | "design";
+
+export interface ProjectType {
   title: string;
   year: number;
   description: string;
-  type: ButtonType | ButtonType[]; // เปลี่ยน type เป็นรองรับทั้ง string เดียวหรือ array ของ ButtonType
+  type: ButtonFilterType | ButtonFilterType[]; // เปลี่ยน type เป็นรองรับทั้ง string เดียวหรือ array ของ ButtonType
   content: string;
   image: string;
+  path: string;
+  linkUrl: string;
+  linkGithub:string;
 }
 
 export default function WorkIndex() {
-  const [activeButton, setActiveButton] = useState<ButtonType>("all");
+  const [activeButton, setActiveButton] =
+    useState<ButtonFilterType>("development");
   const [renderingListProject, setRenderingListProject] =
     useState<boolean>(true);
   const router = useRouter();
   // ข้อมูลโปรเจกต์
-  const projects: Project[] = [
-    {
-      title: "Buddy Blog",
-      year: 2025,
-      description: "Design & Development",
-      type: "development",
-      // type: ["development", "design"],
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ratione enim magni officia! Officiis vero adipisci nostrum, recusandae tenetur veritatis soluta quaerat deserunt quae maiores odio illum vel, ad perferendis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ratione enim magni officia! Officiis vero adipisci nostrum, recusandae tenetur veritatis soluta quaerat deserunt quae maiores odio illum vel, ad perferendis.",
-      image: "/image-project/buddy-blog/cover-buddy-blog.png",
-    },
-
-    {
-      title: "Home Service",
-      year: 2025,
-      description: "Interaction & Development",
-      type: "development",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ratione enim magni officia! Officiis vero adipisci nostrum, recusandae tenetur veritatis soluta quaerat deserunt quae maiores odio illum vel, ad perferendis.",
-      image: "/image-project/home-service/cover-home-service.png",
-    },
-    {
-      title: "Kathu",
-      year: 2025,
-      description: "Design & Branding",
-      type: "design",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ratione enim magni officia! Officiis vero adipisci nostrum, recusandae tenetur veritatis soluta quaerat deserunt quae maiores odio illum vel, ad perferendis.",
-      image: "/image-project/kathu/cover-kathu.png",
-    },
-    {
-      title: "Chana",
-      year: 2025,
-      description: "Design & Branding",
-      type: "design",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ratione enim magni officia! Officiis vero adipisci nostrum, recusandae tenetur veritatis soluta quaerat deserunt quae maiores odio illum vel, ad perferendis.",
-      image: "/image-project/chana/cover-chana.png",
-    },
-    {
-      title: "day one",
-      year: 2025,
-      description: "Design & Branding",
-      type: "design",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ratione enim magni officia! Officiis vero adipisci nostrum, recusandae tenetur veritatis soluta quaerat deserunt quae maiores odio illum vel, ad perferendis.",
-      image: "/image-project/day-one/cover-day-one.png",
-    },
-    {
-      title: "Wattarin House",
-      year: 2025,
-      description: "Design & Branding",
-      type: "design",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ratione enim magni officia! Officiis vero adipisci nostrum, recusandae tenetur veritatis soluta quaerat deserunt quae maiores odio illum vel, ad perferendis.",
-      image: "/image-project/wattarin-house/cover-wattarin-house.png",
-    },
-  ];
 
   // จำนวนโปรเจกต์แต่ละชนิด
-  const countByType: Record<ButtonType, number> = {
+  const countByType: Record<ButtonFilterType, number> = {
     all: projects.length,
     development: projects.filter(
       (p) =>
@@ -110,49 +59,48 @@ export default function WorkIndex() {
     <>
       <div className="min-h-screen min-w-screen bg-white flex flex-col items-center text-black">
         <Navbar />
-        <main className="w-full max-w-[1140px mt-[140px] lg:mt-[250px] flex flex-col items-center px-4 lg:px-20 mb-40 lg:max-w-[1200px]  lg:ml-[40px]  lg:mb-[200px] ">
+        <main className="w-full max-w-[1140px mt-[140px] lg:mt-[250px] flex flex-col items-center px-4 lg:px-20 mb-40 lg:max-w-[1200px]  lg:mb-[200px] ">
           {/* div head title */}
           <div className="flex lg:pl-9 lg:w-full flex-col gap-20 mb-5 lg:mb-10 w-full max-w-[458px] lg:max-w-full ">
             <div className="flex flex-col gap-5 lg:min-w-[569px] ">
-              <h1 className=" flex text-[clamp(32px,_5vw,_60px)] text-inria text-[#3C33E6]">
-                Intend to creating <br className="md:hidden" /> digital products
+              <h1 className=" flex text-[clamp(32px,_5vw,_72px)] text-inria text-[#3C33E6]">
+                Intend to creating <br className="" /> digital products
               </h1>
-              <h1 className=" text-xs  w-full lg:max-w-[920px] lg:text-base font-light">
+              <h1 className=" text-xs  w-full lg:max-w-[880px] lg:text-base font-light">
                 A Full Stack Developer base in Bangkok with a Bachelor&apos;s
-                degree in Industrial Design from King Mongkut&apos;s Institute of
-                Technology Ladkrabang. My background in usability and design
+                degree in Industrial Design from King Mongkut&apos;s Institute
+                of Technology Ladkrabang. My background in usability and design
                 helps me understand functional, user-friendly solutions. I am
                 passion about building intuitive websites and and exploring new
                 technologies to enhance my skills.
               </h1>
               <span className="flex gap-10 text-xs font-medium  lg:text-base ">
                 <button
-                  className="hover:scale-105 hover:text-gray-500 transform origin-left transition-all duration-200"
+                  className="hover:scale-105 hover:text-[#3C33E6] transform origin-left transition-all duration-300"
                   onClick={() => router.push("/about")}
                 >
                   About / CV →
                 </button>
                 <button
-                  className="hover:scale-105 hover:text-gray-500 transform origin-left transition-all duration-200"
+                  className="hover:scale-105 hover:text-[#3C33E6] transform origin-left transition-all duration-300"
                   onClick={() => router.push("/contact")}
                 >
                   Get in Touch →
                 </button>
               </span>
-              <div></div>
             </div>
             <div className="w-full flex flex-row justify-between">
               <div className="flex flex-row gap-2 lg:gap-3 ">
-                {["All", "Development", "Design"].map((button) => (
+                {["Development", "Design"].map((button) => (
                   <button
                     key={button}
-                    className={`py-3 px-6 lg:text-2xl lg:font-light lg:px-8 rounded-full border duration-200 relative ${
+                    className={`py-3 px-6 lg:text-2xl lg:font-light lg:px-8 rounded-full border duration-300 relative ${
                       activeButton === button.toLowerCase() // ใช้ toLowerCase() เพื่อเปรียบเทียบให้ตรงกับค่าใน activeButton
                         ? "bg-black text-white border-black cursor-pointer"
-                        : "border-[#AFAFAF] hover:bg-black hover:text-white cursor-pointer"
+                        : "border-[#AFAFAF] hover:bg-[#3C33E6] hover:border-[#3C33E6] hover:text-white cursor-pointer "
                     }`}
                     onClick={() =>
-                      setActiveButton(button.toLowerCase() as ButtonType)
+                      setActiveButton(button.toLowerCase() as ButtonFilterType)
                     } // ใช้ toLowerCase() ที่นี่ด้วย
                   >
                     {button}
@@ -173,10 +121,10 @@ export default function WorkIndex() {
               {/* button project list */}
               <div className="hidden lg:flex flex-row gap-3 ">
                 <button
-                  className={`w-[58px] h-[58px] rounded-full flex flex-col justify-center items-center gap-2 duration-200 transition-colors group ${
+                  className={`w-[58px] h-[58px] rounded-full flex flex-col justify-center items-center gap-2 duration-300 transition-colors group ${
                     renderingListProject
-                      ? "bg-white border border-[#AFAFAF] hover:bg-black"
-                      : "bg-black border-black"
+                      ? "bg-white border border-[#AFAFAF] hover:border-[#3C33E6] hover:bg-[#3C33E6]"
+                      : "bg-black border-[black]"
                   }`}
                   onClick={() => setRenderingListProject(false)} // เปลี่ยนสถานะแบบ toggle
                 >
@@ -197,10 +145,10 @@ export default function WorkIndex() {
 
                 {/* button project thumbnails */}
                 <button
-                  className={`w-[58px] h-[58px] rounded-full flex flex-col justify-center items-center gap-1 duration-200 transition-colors group ${
+                  className={`w-[58px] h-[58px] rounded-full flex flex-col justify-center items-center gap-1 duration-300 transition-colors group ${
                     renderingListProject
                       ? "bg-black border-black"
-                      : "bg-white hover:bg-black border border-[#AFAFAF]"
+                      : "bg-white hover:bg-[#3C33E6] hover:border-[#3C33E6] border border-[#AFAFAF]"
                   }`}
                   onClick={() => setRenderingListProject(true)} // เปลี่ยนจาก true เป็น toggle state
                 >
@@ -241,6 +189,7 @@ export default function WorkIndex() {
                   year={project.year}
                   description={project.description}
                   image={project.image}
+                  path={project.path}
                 />
               ))}
             </div>
@@ -257,6 +206,8 @@ export default function WorkIndex() {
                         description={project.description}
                         content={project.content}
                         image={project.image}
+                        path={project.path}
+                        linkUrl={project.linkUrl}
                       />
                     ) : (
                       <ProjectDesktopThumbnailLeft
@@ -265,6 +216,8 @@ export default function WorkIndex() {
                         description={project.description}
                         content={project.content}
                         image={project.image}
+                        path={project.path}
+                        linkUrl={project.linkUrl}
                       />
                     )}
                   </div>
@@ -277,7 +230,7 @@ export default function WorkIndex() {
               <div className="hidden lg:flex flex-col w-full">
                 <div className="flex justify-start text-xs">
                   <div className="pl-9 text-[#AFAFAF] mt-3 mb-2">PROJECT</div>
-                  <div className="pl-[308px] text-[#AFAFAF] mt-3 mb-2 mr-auto">
+                  <div className="pl-[221px] text-[#AFAFAF] mt-3 mb-2 mr-auto">
                     DESCRIPTION
                   </div>
                   <div className=" text-[#AFAFAF] mt-3 mb-2">YEAR</div>
@@ -290,6 +243,7 @@ export default function WorkIndex() {
                     description={project.description}
                     content={project.content}
                     image={project.image}
+                    path={project.path}
                   />
                 ))}
               </div>

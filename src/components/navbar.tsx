@@ -5,22 +5,24 @@ export function Navbar() {
   const router = useRouter();
   const [showButtonMenu, setShowButtonMenu] = useState<boolean>(false);
   const [popupSidebar, setPopupSidebar] = useState<boolean>(false);
+  const [holdColorButtonMenu, setHoldColorButtonMenu] =
+    useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const isLargeScreen = window.matchMedia("(min-width: 1024px)").matches; // เช็คว่าเป็นหน้าจอ lg หรือไม่
       const scrollThreshold = isLargeScreen ? 80 : 80;
 
-      if (!isLargeScreen && router.pathname === "/work") {
+      if (!isLargeScreen && router.pathname === "/") {
         if (window.scrollY > scrollThreshold) {
           setShowButtonMenu(true);
         } else {
           setShowButtonMenu(false);
         }
-        // เฉพาะ mobile และ path === "/work"
-        if (window.scrollY > 290 && window.scrollY < 380) {
-          setShowButtonMenu(false);
-        } else if (window.scrollY >= 380) {
+        // เฉพาะ mobile และ path === "/index"
+        if (window.scrollY > 485 && window.scrollY < 575) {
+          setShowButtonMenu(true);
+        } else if (window.scrollY >= 575) {
           setShowButtonMenu(true);
         } else if (window.scrollY < scrollThreshold) {
           setShowButtonMenu(false);
@@ -60,7 +62,7 @@ export function Navbar() {
 
   function handleButtonSidebar() {
     setPopupSidebar(true);
-    setShowButtonMenu(false);
+    // setShowButtonMenu(false);
   }
   function handleMenuSidebar() {
     setPopupSidebar(true);
@@ -101,18 +103,20 @@ export function Navbar() {
           </button>
           {/* div menu mobile */}
           <button
-            className="lg:hidden group flex flex-row items-center gap-2"
+            className="lg:hidden group flex items-center gap-1 cursor-pointer  z-20"
             onClick={handleMenuSidebar}
+            type="button"
           >
             <div
-              className={`w-[6px] h-[6px] bg-black rounded-full opacity-100 group-hover:opacity-100 group-hover:w-[8px] group-hover:h-[8px] transition-all duration-300  hover:w-[8px] hover:h-[8px]
+              className={`w-[6px] h-[6px] bg-black rounded-full opacity-100 group-hover:opacity-100 group-hover:w-[8px] group-hover:h-[8px] transition-all duration-300  hover:w-[8px] hover:h-[8px] 
             `}
-            ></div>
-            Menu
+            >
+            </div>
+              Menu
           </button>
 
           {/* div menu desktop */}
-          <div className="hidden lg:flex text-center gap-20 justify-between items-center">
+          <div className="hidden lg:flex text-center gap-20 justify-between items-center z-20">
             <NavButton label="Work" path="/" />
             <NavButton label="About" path="/about" />
             <NavButton label="Contact" path="/contact" />
@@ -121,25 +125,30 @@ export function Navbar() {
       </header>
       <div className="w-full h-[1.5px] bg-[#3C33E6]"></div>
 
-      {/* button menu scroll window */}
-      <button
-        type="button"
-        className={`fixed top-5 right-5  bg-[#3C33E6] rounded-full flex flex-col justify-center items-center gap-[6px] transition-all duration-300 ease-in-out hover:w-[45px] hover:h-[45px] lg:hover:w-16 lg:hover:h-16 active:w-[45px] active:h-[45px] group ${
-          showButtonMenu
-            ? "w-[45px] h-[45px] lg:h-16 lg:w-16 opacity-100 z-10"
-            : "w-0 h-0 opacity-0 duration-200"
-        }`}
-        onClick={handleButtonSidebar}
-      >
-        <div className="bg-white w-7 h-[2px]"></div>
-        <div className="bg-white w-7 h-[2px]"></div>
-      </button>
+      {/* button menu */}
+      <div className="fixed top-5 right-5 lg:top-8 lg:right-8 flex items-center justify-center  z-10">
+        <button
+          type="button"
+          className={`  hover:bg-[#3C33E6] rounded-full flex flex-col justify-center items-center gap-[6px] transition-all  w-[45px] h-[45px] hover:w-[45px] hover:h-[45px] lg:h-16 lg:w-16 lg:hover:w-16 lg:hover:h-16 group transform origin-center  duration-300${
+            showButtonMenu ? " scale-100 opacity-100  " : " scale-0 opacity-0 "
+          }${holdColorButtonMenu ? "bg-[#3C33E6] duration-0" : "bg-black "}`}
+          onClick={() => {
+            handleButtonSidebar();
+          }}
+          onMouseLeave={() => setHoldColorButtonMenu(false)}
+        >
+          <div className="bg-white w-7 h-[2px]"></div>
+          <div className="bg-white w-7 h-[2px]"></div>
+        </button>
+      </div>
 
       {/* show popupSidebar */}
+
       <div
-        className={`fixed  bg-black  duration-700 ${
+        className={`fixed bg-black  duration-700 ${
           popupSidebar ? "w-full h-full opacity-20 flex" : "opacity-0"
         }`}
+        onClick={handleCloseButtonSidebar}
       ></div>
       <div
         className={`fixed flex items-center top-0 right-0 h-full w-full lg:w-[400px] bg-black shadow-lg transition-all duration-200 ${
@@ -147,26 +156,31 @@ export function Navbar() {
         }`}
       >
         {/* button for close sidebar */}
-        <button
-          className="absolute flex flex-col justify-center gap-2 top-6 right-8 w-[40px] h-[40px] rounded-full shadow-md transition-all duration-300 p-2"
-          onClick={handleCloseButtonSidebar}
-        >
-          <div
-            className={`bg-white w-full h-[2px]${
-              popupSidebar
-                ? " duration-1000 rotate-[-45deg]"
-                : "duration-1000 rotate-[0deg]"
-            }`}
+        <div className="fixed top-6 right-6 lg:top-11 lg:right-11 flex items-center justify-center">
+          <button
+            className="flex flex-col justify-center gap-2 top-6 right-8 w-[40px] h-[40px] rounded-full shadow-md transition-all duration-300 p-[6px]"
+            onClick={() => {
+              handleCloseButtonSidebar();
+              setHoldColorButtonMenu(true);
+            }}
           >
             <div
-              className={`bg-white w-full h-[2px] rotate-[45deg] ${
+              className={`bg-white w-full h-[2px]${
                 popupSidebar
-                  ? " duration-1000 rotate-[90deg]"
+                  ? " duration-1000 rotate-[-45deg]"
                   : "duration-1000 rotate-[0deg]"
               }`}
-            ></div>
-          </div>
-        </button>
+            >
+              <div
+                className={`bg-white w-full h-[2px] rotate-[45deg] ${
+                  popupSidebar
+                    ? " duration-1000 rotate-[90deg]"
+                    : "duration-1000 rotate-[0deg]"
+                }`}
+              ></div>
+            </div>
+          </button>
+        </div>
         {/* sidebar for navigation page */}
         <div className="px-14 py-24 gap-16 flex flex-col w-full mr-5">
           <div className="flex flex-col w-full ">
