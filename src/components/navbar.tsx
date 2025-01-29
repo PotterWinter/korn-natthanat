@@ -110,9 +110,8 @@ export function Navbar() {
             <div
               className={`w-[6px] h-[6px] bg-black rounded-full opacity-100 group-hover:opacity-100 group-hover:w-[8px] group-hover:h-[8px] transition-all duration-300  hover:w-[8px] hover:h-[8px] 
             `}
-            >
-            </div>
-              Menu
+            ></div>
+            Menu
           </button>
 
           {/* div menu desktop */}
@@ -125,11 +124,11 @@ export function Navbar() {
       </header>
       <div className="w-full h-[1.5px] bg-[#3C33E6]"></div>
 
-      {/* button menu */}
+      {/* button hamburger menu */}
       <div className="fixed top-5 right-5 lg:top-8 lg:right-8 flex items-center justify-center  z-10">
         <button
           type="button"
-          className={`  hover:bg-[#3C33E6] rounded-full flex flex-col justify-center items-center gap-[6px] transition-all  w-[45px] h-[45px] hover:w-[45px] hover:h-[45px] lg:h-16 lg:w-16 lg:hover:w-16 lg:hover:h-16 group transform origin-center  duration-300${
+          className={`  lg:hover:bg-[#3C33E6] rounded-full flex flex-col justify-center items-center gap-[6px] transition-all  w-[45px] h-[45px] hover:w-[45px] hover:h-[45px] lg:h-16 lg:w-16 lg:hover:w-16 lg:hover:h-16 group transform origin-center  duration-300${
             showButtonMenu ? " scale-100 opacity-100  " : " scale-0 opacity-0 "
           }${holdColorButtonMenu ? "bg-[#3C33E6] duration-0" : "bg-black "}`}
           onClick={() => {
@@ -255,6 +254,11 @@ export function Navbar() {
 export function NavButton({ label, path }: { label: string; path: string }) {
   const router = useRouter();
   const isActive = router.pathname === path;
+
+  // const isActive =
+  // router.pathname === path ||
+  // (path === "/" && router.pathname.startsWith("/project")) ||
+  // (path !== "/" && router.pathname.startsWith(path))
 
   return (
     <button

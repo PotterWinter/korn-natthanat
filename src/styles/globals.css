@@ -30,4 +30,6 @@ body {
   display: none;
 }
 
-
+.new-line {
+  white-space: pre-line; /* ให้ขึ้นบรรทัดใหม่จากการใช้ \n */
+}

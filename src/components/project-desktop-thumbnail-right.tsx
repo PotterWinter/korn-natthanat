@@ -52,7 +52,7 @@ export function ProjectDesktopThumbnailRight({
           </div>
           <div className="max-w-[420px] text-sm font-light">{content}</div>
         </div>
-        <div className="flex duration-200 hover:scale-105 cursor-pointer">
+        <div className="flex duration-200 hover:scale-105 cursor-pointer border-[1px] border-gray-50">
           <img
             src={image}
             alt={title}

@@ -37,7 +37,7 @@ export function ProjectDesktopThumbnailLeft({
       <div className="flex w-full h-[1.5px]  bg-[#3C33E6]"></div>
       <div className="flex flex-row w-full gap-10 justify-between items-center my-5 ">
         {/* <div className="flex ml-9 w-[600px] h-[390px] bg-black"></div> */}
-        <div className="flex ml-9 flex-row w-full  justify-between items-center  duration-200 hover:scale-105 cursor-pointer">
+        <div className="flex ml-9 flex-row w-full  justify-between items-center  duration-200 hover:scale-105 cursor-pointer  border-[1px] border-gray-50">
           <img
             src={image}
             alt={title}
