@@ -7,7 +7,6 @@ import { ProjectDesktopList } from "@/components/project-desktop-list";
 import { useRouter } from "next/router";
 import { projects } from "../components/project-data";
 
-
 export type ButtonFilterType = "all" | "development" | "design";
 
 export interface ProjectType {
@@ -19,7 +18,7 @@ export interface ProjectType {
   image: string;
   path: string;
   linkUrl: string;
-  linkGithub:string;
+  linkGithub: string;
 }
 
 export default function WorkIndex() {
@@ -61,7 +60,7 @@ export default function WorkIndex() {
         <Navbar />
         <main className="w-full max-w-[1140px mt-[140px] lg:mt-[250px] flex flex-col items-center px-4 lg:px-20 mb-40 lg:max-w-[1200px]  lg:mb-[200px] ">
           {/* div head title */}
-          <div className="flex lg:pl-9 lg:w-full flex-col gap-20 mb-5 lg:mb-10 w-full max-w-[458px] lg:max-w-full ">
+          <section className="flex lg:pl-9  flex-col gap-20 mb-5 lg:mb-10 w-full max-w-[458px] lg:max-w-full lg:w-[958px] ">
             <div className="flex flex-col gap-5 lg:min-w-[569px] ">
               <h1 className=" flex text-[clamp(32px,_5vw,_72px)] text-inria text-[#3C33E6]">
                 Intend to creating <br className="" /> digital products
@@ -178,7 +177,7 @@ export default function WorkIndex() {
                 </button>
               </div>
             </div>
-          </div>
+          </section>
           <section>
             {/* project for mobile */}
             <div className="lg:hidden w-full ">
