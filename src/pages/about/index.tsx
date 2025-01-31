@@ -72,16 +72,19 @@ export default function AboutIndex() {
                 <h1 className="font-semibold lg:text-2xl ">SKILL</h1>
                 <div>
                   <h1 className="text-sm lg:text-xl lg:mb-2">My TechStack</h1>
-                  <h1 className="font-light text-xs text-gray-500 lg:text-sm lg:text-black lg:max-w-[920px]">
+                  <h1 className="font-light text-xs text-gray-500 lg:text-sm lg:text-black lg:max-w-[920px]"
+                  style={{ wordSpacing: "10px" }}>
                     • HTML • CSS • JavaScript • React • Tailwind • TypeScript •
                     Node.js • Express.js • MongoDB • PostgresSQL • Next.js •
                     Supabase • Git • Github • Vercel • Figma •
                   </h1>
                 </div>
                 <div>
-                  <h1 className="text-sm lg:text-xl lg:mb-2">Interested</h1>
-                  <h1 className="font-light text-xs text-gray-500 lg:text-sm lg:text-black lg:max-w-[920px]">
-                    {" "}
+                  <h1 className="text-sm lg:text-xl lg:mb-2"
+                  >Interested</h1>
+                  <h1 className="font-light text-xs text-gray-500 lg:text-sm lg:text-black lg:max-w-[920px]"
+                  style={{ wordSpacing: "10px" }}>
+
                     • Go • Nuxt • Vue •
                   </h1>
                 </div>

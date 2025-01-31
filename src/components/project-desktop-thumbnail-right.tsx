@@ -9,6 +9,7 @@ interface ProjectDesktopThumbnailPropsRight {
   image: string;
   path: string;
   linkUrl: string;
+  techstack: string;
 }
 
 export function ProjectDesktopThumbnailRight({
@@ -19,6 +20,7 @@ export function ProjectDesktopThumbnailRight({
   image,
   path,
   linkUrl,
+  techstack
 }: ProjectDesktopThumbnailPropsRight) {
   const router = useRouter();
 
@@ -30,13 +32,15 @@ export function ProjectDesktopThumbnailRight({
     } else {
       // ถ้า path มีค่าให้ไปยัง path นั้นในเว็บ
       router.push(path);
+
     }
+
   };
 
   return (
     <>
       <div className="flex w-full h-[1.5px]  bg-[#3C33E6]"></div>
-      <div className="flex flex-row w-full  justify-between items-center my-5 gap-10">
+      <div className="flex flex-row w-full  justify-between items-center my-5 gap-10 group">
         <div className="flex flex-col ml-9 ">
           <div className="">
             <h1
@@ -46,11 +50,13 @@ export function ProjectDesktopThumbnailRight({
               {title}
             </h1>
           </div>
-          <div className="flex flex-row justify-between -mt-5 mb-10 font-light w-[420px] ">
+          <div className="flex flex-row justify-between -mt-5 mb-3 font-light w-[420px] text-gray-500 text-base">
             <h1>{description}</h1>
             <h1>{year}</h1>
           </div>
-          <div className="max-w-[420px] text-sm font-light">{content}</div>
+          <div className="max-w-[420px] text-xs font-light text-gray-500">{content}</div>
+          <div className="max-w-[420px] text-base  mt-5 "
+          style={{ wordSpacing: "10px" }}>{techstack}</div>
         </div>
         <div className="flex duration-200 hover:scale-105 cursor-pointer border-[1px] border-gray-50">
           <img

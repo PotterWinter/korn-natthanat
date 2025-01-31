@@ -5,7 +5,7 @@ import { ProjectDesktopThumbnailLeft } from "@/components/project-desktop-thumbn
 import { ProjectDesktopThumbnailRight } from "@/components/project-desktop-thumbnail-right";
 import { ProjectDesktopList } from "@/components/project-desktop-list";
 import { useRouter } from "next/router";
-import { projects } from "../components/project-data";
+import { projectsData } from "../components/project-data";
 
 export type ButtonFilterType = "all" | "development" | "design";
 
@@ -31,13 +31,13 @@ export default function WorkIndex() {
 
   // จำนวนโปรเจกต์แต่ละชนิด
   const countByType: Record<ButtonFilterType, number> = {
-    all: projects.length,
-    development: projects.filter(
+    all: projectsData.length,
+    development: projectsData.filter(
       (p) =>
         p.type === "development" ||
         (Array.isArray(p.type) && p.type.includes("development"))
     ).length,
-    design: projects.filter(
+    design: projectsData.filter(
       (p) =>
         p.type === "design" ||
         (Array.isArray(p.type) && p.type.includes("design"))
@@ -47,8 +47,8 @@ export default function WorkIndex() {
   // กรองโปรเจกต์ตามปุ่มที่เลือก
   const filteredProjects =
     activeButton === "all"
-      ? projects // ถ้าเลือก All ก็ให้แสดงโปรเจกต์ทั้งหมด
-      : projects.filter((project) =>
+      ? projectsData // ถ้าเลือก All ก็ให้แสดงโปรเจกต์ทั้งหมด
+      : projectsData.filter((project) =>
           Array.isArray(project.type)
             ? project.type.includes(activeButton)
             : project.type === activeButton
@@ -60,7 +60,7 @@ export default function WorkIndex() {
         <Navbar />
         <main className="w-full max-w-[1140px mt-[140px] lg:mt-[250px] flex flex-col items-center px-4 lg:px-20 mb-40 lg:max-w-[1200px]  lg:mb-[200px] ">
           {/* div head title */}
-          <section className="flex lg:pl-9  flex-col gap-20 mb-5 lg:mb-10 w-full max-w-[458px] lg:max-w-full lg:w-[958px] ">
+          <section className="flex md:pl-0  flex-col gap-20 mb-5 lg:mb-10 w-full max-w-[458px] lg:max-w-full lg:w-[958px] ">
             <div className="flex flex-col gap-5 lg:min-w-[569px] ">
               <h1 className=" flex text-[clamp(32px,_5vw,_72px)] text-inria text-[#3C33E6]">
                 Intend to creating <br className="" /> digital products
@@ -154,24 +154,30 @@ export default function WorkIndex() {
                   {renderingListProject ? (
                     <>
                       <div className="flex flex-row gap-1">
+                        <div className="w-5 h-5 border-[2px] border-white"></div>
+                      </div>
+                      {/* <div className="flex flex-row gap-1">
                         <div className="w-2 h-2 border-[2px] border-white"></div>
                         <div className="w-2 h-2 border-[2px] border-white"></div>
                       </div>
                       <div className="flex flex-row gap-1">
                         <div className="w-2 h-2 border-[2px] border-white"></div>
                         <div className="w-2 h-2 border-[2px] border-white"></div>
-                      </div>
+                      </div> */}
                     </>
                   ) : (
                     <>
                       <div className="flex flex-row gap-1">
+                        <div className="w-5 h-5 border-[2px] border-black group-hover:border-white transition-colors"></div>
+                      </div>
+                      {/* <div className="flex flex-row gap-1">
                         <div className="w-2 h-2 border-[2px] border-black group-hover:border-white transition-colors"></div>
                         <div className="w-2 h-2 border-[2px] border-black group-hover:border-white transition-colors"></div>
                       </div>
                       <div className="flex flex-row gap-1">
                         <div className="w-2 h-2 border-[2px] border-black group-hover:border-white transition-colors"></div>
                         <div className="w-2 h-2 border-[2px] border-black group-hover:border-white transition-colors"></div>
-                      </div>
+                      </div> */}
                     </>
                   )}
                 </button>
@@ -207,6 +213,7 @@ export default function WorkIndex() {
                         image={project.image}
                         path={project.path}
                         linkUrl={project.linkUrl}
+                        techstack={project.techStack}
                       />
                     ) : (
                       <ProjectDesktopThumbnailLeft
@@ -217,6 +224,7 @@ export default function WorkIndex() {
                         image={project.image}
                         path={project.path}
                         linkUrl={project.linkUrl}
+                        techStack={project.techStack}
                       />
                     )}
                   </div>
@@ -226,10 +234,10 @@ export default function WorkIndex() {
 
             {/* project for desktop list */}
             {!renderingListProject && (
-              <div className="hidden lg:flex flex-col w-full">
+              <div className="hidden lg:flex flex-col">
                 <div className="flex justify-start text-xs">
                   <div className="pl-9 text-[#AFAFAF] mt-3 mb-2">PROJECT</div>
-                  <div className="pl-[221px] text-[#AFAFAF] mt-3 mb-2 mr-auto">
+                  <div className="pl-[221px] text-[#AFAFAF] mt-3 mb-2 mr-[242px]">
                     DESCRIPTION
                   </div>
                   <div className=" text-[#AFAFAF] mt-3 mb-2">YEAR</div>
@@ -243,6 +251,7 @@ export default function WorkIndex() {
                     content={project.content}
                     image={project.image}
                     path={project.path}
+                    techStack={project.techStack}
                   />
                 ))}
               </div>

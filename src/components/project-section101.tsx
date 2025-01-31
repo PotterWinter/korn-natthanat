@@ -28,7 +28,8 @@ export function ProjectSection101({
       <section className="flex flex-col gap-5 lg:gap-8 mt-12 lg:mt-0">
         <div className="flex flex-col gap-1 lg:gap-3">
           <h1 className=" font-medium">TECH STACK</h1>
-          <h1 className="text-xs lg:text-sm font-light">{techStack}</h1>
+          <h1 className="text-xs lg:text-sm font-light"
+          style={{ wordSpacing: "10px" }}>{techStack}</h1>
         </div>
         <div className="flex flex-col gap-1 lg:gap-3">
           <h1 className="font-medium">RESPONSIBILITY</h1>

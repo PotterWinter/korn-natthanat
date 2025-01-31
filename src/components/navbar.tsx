@@ -124,13 +124,21 @@ export function Navbar() {
       </header>
       <div className="w-full h-[1.5px] bg-[#3C33E6]"></div>
 
+      {/* Overlay (ปิดกั้นปุ่มอื่น) */}
+      {/* {showButtonMenu && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-[9] "
+          onClick={handleButtonSidebar}
+        ></div>
+      )} */}
+
       {/* button hamburger menu */}
-      <div className="fixed top-5 right-5 lg:top-8 lg:right-8 flex items-center justify-center  z-10">
+      <div className="fixed top-5 right-5 lg:top-8 lg:right-8 flex items-center justify-center z-10">
         <button
           type="button"
-          className={`  lg:hover:bg-[#3C33E6] rounded-full flex flex-col justify-center items-center gap-[6px] transition-all  w-[45px] h-[45px] hover:w-[45px] hover:h-[45px] lg:h-16 lg:w-16 lg:hover:w-16 lg:hover:h-16 group transform origin-center  duration-300${
+          className={`  hover:bg-[#3C33E6] rounded-full flex flex-col justify-center items-center gap-[6px] transition-all  w-[45px] h-[45px] hover:w-[45px] hover:h-[45px] lg:h-16 lg:w-16 lg:hover:w-16 lg:hover:h-16 group transform origin-center  duration-300${
             showButtonMenu ? " scale-100 opacity-100  " : " scale-0 opacity-0 "
-          }${holdColorButtonMenu ? "bg-[#3C33E6] duration-0" : "bg-black "}`}
+          }${holdColorButtonMenu ? "lg:bg-[#3C33E6] duration-0" : "bg-black "}`}
           onClick={() => {
             handleButtonSidebar();
           }}
@@ -142,10 +150,9 @@ export function Navbar() {
       </div>
 
       {/* show popupSidebar */}
-
       <div
-        className={`fixed bg-black  duration-700 ${
-          popupSidebar ? "w-full h-full opacity-20 flex" : "opacity-0"
+        className={`fixed inset-0 bg-black  duration-700 ${
+          popupSidebar ? "w-full h-full opacity-20 flex pointer-events-auto z-40" : "opacity-0 pointer-events-none"
         }`}
         onClick={handleCloseButtonSidebar}
       ></div>

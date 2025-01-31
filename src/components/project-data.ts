@@ -15,7 +15,7 @@ export interface ProjectType {
   linkBahance: string;
 }
 
-export const projects: ProjectType[] = [
+export const projectsData: ProjectType[] = [
   {
     title: "Buddy Blog",
     year: 2025,
@@ -25,8 +25,7 @@ export const projects: ProjectType[] = [
     content:
       "Developed “Buddy Blog,” a dynamic personal blog platform for seamless content creation and interaction. Key features include easy user sign-up, intuitive post creation, a comment system for engagement, and profile management. The platform ensures a smooth, user-friendly experience for both readers and content creators.",
     responsibility: "",
-    techStack: `• HTML • CSS • JavaScript • React • Tailwind • TypeScript •
-                    Node.js •`,
+    techStack: `• Nuxt.js • PostgresSQL • TypeScript • Tailwind • SupabaseAuth •`,
     image: "/image-project/buddy-blog/cover-buddy-blog.png",
     path: "/project/buddy-blog",
     linkUrl: "",
@@ -44,8 +43,7 @@ export const projects: ProjectType[] = [
     responsibility: `Final project form tech up full stack bootcamp 5 person in 8 week almost is about all of admin page, login user and login admin for all frontend and half of backend you can follow my duty form this path 
     
     • /admin/category • /admin/service • /admin/adminpromotioncode • /admin/logout • /admin/login • /login •`,
-    techStack: `• HTML • CSS • JavaScript • React • Tailwind • TypeScript •
-                    Node.js •`,
+    techStack: `• Next.js • PostgresSQL • TypeScript • Tailwind • SupabaseAuth •`,
     image: "/image-project/home-service/cover-home-service.png",
     path: "/project/home-service",
     linkUrl: "home-service-finalproject.vercel.app",
