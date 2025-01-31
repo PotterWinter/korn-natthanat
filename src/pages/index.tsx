@@ -248,7 +248,6 @@ export default function WorkIndex() {
                     title={project.title}
                     year={project.year}
                     description={project.description}
-                    content={project.content}
                     image={project.image}
                     path={project.path}
                     techStack={project.techStack}
