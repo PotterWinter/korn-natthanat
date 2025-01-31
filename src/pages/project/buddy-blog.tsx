@@ -3,12 +3,6 @@ import { projectsData } from "@/components/project-data";
 import { ProjectSection101 } from "@/components/project-section101";
 import { ProjectSection102 } from "@/components/project-section102";
 import { ProjectSectionImage101 } from "@/components/project-section-image101";
-import dynamic from "next/dynamic";
-import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
-
-const SyntaxHighlighter = dynamic(() => import("react-syntax-highlighter"), {
-  ssr: false,
-});
 
 export default function HomeServiceProject({}) {
   const project = projectsData.filter(

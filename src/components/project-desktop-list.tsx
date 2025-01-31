@@ -6,7 +6,6 @@ interface ProjectDesktopListProps {
   year: number;
   description: string;
   image: string;
-  content: string;
   path: string;
   techStack: string;
 }
@@ -15,7 +14,6 @@ export function ProjectDesktopList({
   title,
   year,
   description,
-  content,
   path,
   image,
   techStack,
