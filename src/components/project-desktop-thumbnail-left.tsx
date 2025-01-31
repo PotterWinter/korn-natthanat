@@ -8,6 +8,7 @@ interface ProjectDesktopThumbnailPropsLeft {
   image: string;
   path: string;
   linkUrl: string;
+  techStack: string;
 }
 
 export function ProjectDesktopThumbnailLeft({
@@ -18,6 +19,7 @@ export function ProjectDesktopThumbnailLeft({
   image,
   path,
   linkUrl,
+  techStack
 }: ProjectDesktopThumbnailPropsLeft) {
   const router = useRouter();
 
@@ -52,11 +54,13 @@ export function ProjectDesktopThumbnailLeft({
           >
             {title}
           </h1>
-          <div className="flex flex-row justify-between w-full max-w-[420px] -mt-5 mb-10 font-light ">
+          <div className="flex flex-row justify-between w-full max-w-[420px] -mt-5 mb-10 font-light text-gray-500 text-base">
             <h1>{description}</h1>
             <h1>{year}</h1>
           </div>
-          <div className="max-w-[420px] text-sm font-light">{content}</div>
+          <div className="max-w-[420px] text-xs font-light text-gray-500 ">{content}</div>
+          <div className="max-w-[420px] text-base  mt-5 "
+          style={{ wordSpacing: "10px" }}>{techStack}</div>
         </div>
       </div>
     </>
