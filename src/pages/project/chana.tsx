@@ -35,7 +35,7 @@ export default function HomeServiceProject({}) {
               <section className="flex flex-col mt-20 gap-12">
                 <ProjectSectionImage101
                   image={project.image}
-                  content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit aspernatur nihil, in voluptates repellendus, earum laboriosam laborum consequuntur nobis facilis rerum dolorem iste reiciendis adipisci distinctio. Odit iste voluptatem, laborum numquam autem totam perspiciatis porro "
+                  content=""
                 />
               </section>
             </div>

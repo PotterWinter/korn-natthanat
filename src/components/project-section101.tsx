@@ -38,17 +38,20 @@ export function ProjectSection101({
           </div>
         )}
 
-        <div className="flex flex-col gap-1 lg:gap-3">
-          <h1 className="font-medium">RESPONSIBILITY</h1>
-          <h1 className="text-xs lg:text-sm font-light lg:max-w-[880px]">
-            {responsibility.split("\n").map((line, index) => (
-              <React.Fragment key={index}>
-                {line.trim()}
-                <br />
-              </React.Fragment>
-            ))}
-          </h1>
-        </div>
+        {responsibility && (
+          <div className="flex flex-col gap-1 lg:gap-3">
+            <h1 className="font-medium">RESPONSIBILITY</h1>
+            <h1 className="text-xs lg:text-sm font-light lg:max-w-[880px]">
+              {responsibility.split("\n").map((line, index) => (
+                <React.Fragment key={index}>
+                  {line.trim()}
+                  <br />
+                </React.Fragment>
+              ))}
+            </h1>
+          </div>
+        )}
+
         <div className=" flex flex-col gap-5 lg:flex-row lg:gap-20">
           <div className="flex flex-col gap-1 lg:gap-3">
             <h1 className="font-medium">DEESCRIPTION</h1>
