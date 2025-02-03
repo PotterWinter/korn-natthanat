@@ -10,24 +10,24 @@ const SyntaxHighlighter = dynamic(() => import("react-syntax-highlighter"), {
 // import "prismjs/components/prism-javascript.min.js";
 // import { usePrismHighlight } from "@/components/usePrismHighlight.ts";
 
-interface ProjectSectionImage101Prop {
+interface ProjectSectionCode101Prop {
   filepath: string;
   coding: string;
   content: string;
 }
-interface ProjectSectionImage102Prop {
-  filepath01: string;
-  filepath02: string;
-  coding01: string;
-  coding02: string;
-  content: string;
-}
+// interface ProjectSectionCode102Prop {
+//   filepath01: string;
+//   filepath02: string;
+//   coding01: string;
+//   coding02: string;
+//   content: string;
+// }
 
 export function ProjectSectionCode101({
   filepath,
   coding,
   content,
-}: ProjectSectionImage101Prop) {
+}: ProjectSectionCode101Prop) {
   // usePrismHighlight();
   return (
     <>
