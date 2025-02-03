@@ -67,7 +67,7 @@ export const projectsData: ProjectType[] = [
   },
   {
     title: "Kathu",
-    year: 2023,
+    year: 2024,
     description: "Design & Branding",
     type: "design",
     content: `The branding for the swimming club embodies the dedication and perseverance of athletes. Inspired by the rhythmic waves created by powerful kicks, the logo symbolizes a swimmer's unwavering commitment. The refined consistency and strength of trained athletes set them apart from amateurs, reflecting the discipline and passion that define their journey.`,
