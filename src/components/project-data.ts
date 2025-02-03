@@ -82,7 +82,7 @@ export const projectsData: ProjectType[] = [
 
   {
     title: "day one",
-    year: 2024,
+    year: 2023,
     description: "Design & Branding",
     type: "design",
     content:
