@@ -2,20 +2,20 @@ import React from "react";
 
 interface ProjectSection101Props {
   title: string;
-  content:string;
+  content: string;
   techStack: string;
-  responsibility:string
+  responsibility: string;
   description: string;
   year: number;
 }
 
 export function ProjectSection101({
-    title,
-    content,
-    techStack,
-    responsibility,
-    description,
-    year,
+  title,
+  content,
+  techStack,
+  responsibility,
+  description,
+  year,
 }: ProjectSection101Props) {
   return (
     <>
@@ -26,11 +26,18 @@ export function ProjectSection101({
         {content}
       </h1>
       <section className="flex flex-col gap-5 lg:gap-8 mt-12 lg:mt-0">
-        <div className="flex flex-col gap-1 lg:gap-3">
-          <h1 className=" font-medium">TECH STACK</h1>
-          <h1 className="text-xs lg:text-sm font-light"
-          style={{ wordSpacing: "10px" }}>{techStack}</h1>
-        </div>
+        {techStack && (
+          <div className="flex flex-col gap-1 lg:gap-3">
+            <h1 className=" font-medium">TECH STACK</h1>
+            <h1
+              className="text-xs lg:text-sm font-light"
+              style={{ wordSpacing: "10px" }}
+            >
+              {techStack}
+            </h1>
+          </div>
+        )}
+
         <div className="flex flex-col gap-1 lg:gap-3">
           <h1 className="font-medium">RESPONSIBILITY</h1>
           <h1 className="text-xs lg:text-sm font-light lg:max-w-[880px]">
@@ -45,9 +52,7 @@ export function ProjectSection101({
         <div className=" flex flex-col gap-5 lg:flex-row lg:gap-20">
           <div className="flex flex-col gap-1 lg:gap-3">
             <h1 className="font-medium">DEESCRIPTION</h1>
-            <h1 className="text-xs lg:text-sm font-light">
-              {description}
-            </h1>
+            <h1 className="text-xs lg:text-sm font-light">{description}</h1>
           </div>
           <div className="flex flex-col gap-1 lg:gap-3">
             <h1 className="font-medium">YEAR</h1>

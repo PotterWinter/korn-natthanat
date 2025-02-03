@@ -33,11 +33,11 @@ export function ProjectSectionCode101({
     <>
       <div className=" flex flex-col gap-3 items-center w-full">
         {/* <div className=" flex flex-col gap-3 lg:max-w-[948px] w-[91vw] sm:w-[95vw] sm:bg-red-500 md:bg-green-500 md:w-[93vw]"> */}
-        <div className=" bg-[#3a404d] text-xs lg:text-sm group">
+        <div className=" bg-[#3a404d] text-xs lg:text-sm ">
           <div className="flex justify-between px-4 text-white items-center text-sm py-2 mt-1">
             {filepath}
           </div>
-          <div className=" ">
+          <div className=" max-w-[948px] overflow-x-auto w-[91vw]">
             <SyntaxHighlighter
               language="jsx"
               style={atomOneDark}
@@ -46,7 +46,8 @@ export function ProjectSectionCode101({
                 paddingBottom: "40px",
               }}
               // wrapLongLines={true}
-              className="max-w-[91vw] lg:max-w-[948px]"
+              className=""
+              // max-w-[91vw]
             >
               {coding}
             </SyntaxHighlighter>
@@ -54,58 +55,6 @@ export function ProjectSectionCode101({
         </div>
         <h1 className="text-xs lg:text-sm font-light ">{content}</h1>
         <div className=" flex flex-col gap-3"></div>
-      </div>
-    </>
-  );
-}
-export function ProjectSectionCode102({
-  filepath01,
-  coding01,
-  filepath02,
-  coding02,
-  content,
-}: ProjectSectionImage102Prop) {
-  // usePrismHighlight();
-  return (
-    <>
-      <div className=" flex flex-col gap-3 items-center w-full">
-        <div className=" bg-[#3a404d] text-xs lg:text-sm group">
-          <div className="flex justify-between px-4 text-white items-center text-sm py-2 mt-1">
-            {filepath01}
-          </div>
-          <div className=" ">
-            <SyntaxHighlighter
-              language="jsx"
-              style={atomOneDark}
-              customStyle={{
-                padding: "25px",
-                paddingBottom: "40px",
-              }}
-              className="max-w-[91vw] lg:max-w-[948px]"
-            >
-              {coding01}
-            </SyntaxHighlighter>
-          </div>
-        </div>
-        <div className=" bg-[#3a404d] text-xs lg:text-sm group">
-          <div className="flex justify-between px-4 text-white items-center text-sm py-2 mt-1">
-            {filepath02}
-          </div>
-          <div className=" ">
-            <SyntaxHighlighter
-              language="jsx"
-              style={atomOneDark}
-              customStyle={{
-                padding: "25px",
-                paddingBottom: "40px",
-              }}
-              className="max-w-[91vw] lg:max-w-[948px]"
-            >
-              {coding02}
-            </SyntaxHighlighter>
-          </div>
-        </div>
-        <h1 className="text-xs lg:text-sm font-light ">{content}</h1>
       </div>
     </>
   );
