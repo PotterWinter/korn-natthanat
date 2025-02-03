@@ -14,7 +14,7 @@ export default function HomeServiceProject({}) {
       {project.map((project, index) => (
         <div
           key={index}
-          className="min-h-screen min-w-screen bg-white flex flex-col items-center text-black mb-20 "
+          className="min-h-screen min-w-screen bg-white flex flex-col items-center text-black pb-20 "
         >
           <Navbar />
           <main className="flex justify-start lg:justify-center max-w-[980px] mt-[140px] lg:mt-[250px] px-4 mb-40 w-full lg:w-full">
