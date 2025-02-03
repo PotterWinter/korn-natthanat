@@ -26,7 +26,7 @@ export function ProjectSection102({
               }
               className="text-sm lg:text-base lg:font-light w-20 h-20 lg:w-40 lg:h-40  bg-[#3C33E6] rounded-full flex items-center justify-center text-white group "
             >
-              <h1 className="lg:group-hover:scale-125 transition-all duration-300">
+              <h1 className="md:group-hover:scale-125 transition-all duration-300">
                 Git Hub
               </h1>
             </button>
@@ -38,7 +38,7 @@ export function ProjectSection102({
               }
               className="text-sm lg:text-base lg:font-light w-20 h-20 lg:w-40 lg:h-40  bg-[#3C33E6] rounded-full flex items-center justify-center text-white group"
             >
-              <h1 className="lg:group-hover:scale-125 transition-all duration-300">
+              <h1 className="md:group-hover:scale-125 transition-all duration-300">
                 View Site
               </h1>
             </button>
@@ -50,7 +50,7 @@ export function ProjectSection102({
               }
               className="text-sm lg:text-base lg:font-light w-20 h-20 lg:w-40 lg:h-40 bg-[#3C33E6] rounded-full flex items-center justify-center text-white group"
             >
-              <h1 className="lg:group-hover:scale-125 transition-all duration-300">
+              <h1 className="md:group-hover:scale-125 transition-all duration-300">
                 Behance
               </h1>
             </button>

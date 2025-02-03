@@ -77,9 +77,9 @@ export const projectsData: ProjectType[] = [
     image: "/image-project/chana/cover-chana.png",
     path: "/project/chana",
     linkUrl: "",
-    linkGitHub: "behance.net/gallery/190658395/CHANA",
-    linkBahance: "",
-  },
+    linkGitHub: "",
+    linkBahance: "behance.net/gallery/190658395/CHANA",
+  },                                                                                                                                                                                                                                                            
   {
     title: "day one",
     year: 2025,
