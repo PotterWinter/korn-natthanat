@@ -6,6 +6,7 @@ import { ProjectDesktopThumbnailRight } from "@/components/project-desktop-thumb
 import { ProjectDesktopList } from "@/components/project-desktop-list";
 import { useRouter } from "next/router";
 import { projectsData } from "../components/project-data";
+import { useEffect } from "react";
 
 export type ButtonFilterType = "all" | "development" | "design";
 
@@ -53,6 +54,8 @@ export default function WorkIndex() {
             ? project.type.includes(activeButton)
             : project.type === activeButton
         );
+
+  useEffect(() => {}, [activeButton]);
 
   return (
     <>
