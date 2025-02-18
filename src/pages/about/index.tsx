@@ -85,7 +85,7 @@ export default function AboutIndex() {
                   <h1 className="font-light text-xs text-gray-500 lg:text-sm lg:text-black lg:max-w-[920px]"
                   style={{ wordSpacing: "10px" }}>
 
-                    • Go • Nuxt • Vue •
+                    • Go • Nuxt • Vue • Angular •
                   </h1>
                 </div>
               </div>
